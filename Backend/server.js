@@ -1,27 +1,8 @@
 const express = require("express");
-const mongoose = require("mongoose");
+const todoModel = require("./MongoDB/mongoose");
 
 const app = express();
 app.use(express.json());
-
-mongoose
-  .connect("mongodb://localhost:27017/todo")
-  .then(() => {
-    console.log("MongoDB is Connected");
-  })
-  .catch((err) => {
-    console.log("Error: " + err);
-  });
-
-const todoschema = new mongoose.Schema({
-  title: {
-    required: true,
-    type: String,
-  },
-  description: String,
-});
-
-const todoModel = mongoose.model("todo", todoschema);
 
 //add item to list
 app.post("/add-todo", async (req, res) => {
