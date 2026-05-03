@@ -17,4 +17,6 @@ const todoschema = new mongoose.Schema({
   description: String,
 });
 
-module.export = mongoose.model("todo", todoschema);
+const todoModel = mongoose.model("todo", todoschema);
+
+module.exports = todoModel;
