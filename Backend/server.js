@@ -1,8 +1,10 @@
 const express = require("express");
 const todoModel = require("./MongoDB/mongoose");
+const cors = require("cors");
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 //add item to list
 app.post("/add-todo", async (req, res) => {

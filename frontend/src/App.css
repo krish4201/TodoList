@@ -1,0 +1,22 @@
+.updateTabContainer {
+  z-index: 999;
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(193, 179, 179, 0.521);
+}
+.updateTab {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 20px;
+}
